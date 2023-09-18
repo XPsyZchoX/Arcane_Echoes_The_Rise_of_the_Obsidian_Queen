@@ -41,21 +41,6 @@ Do you have what it takes to challenge destiny and thwart the rise of the Obsidi
 
 <br>
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-The following instructions will guide you on how to get a copy of the project running on your local machine, from installing prerequisites to launching the game.
-
-### Prerequisites
-
-[.NET Core SDK](https://dotnet.microsoft.com/download)
-
-### Installation
-
-TODO
-
-<br>
-
 <!-- GAMEPLAY AND FEATURES -->
 ## Gameplay and Features
 
@@ -64,6 +49,42 @@ TODO
 - Interact with a host of meticulously crafted characters.
 - Unravel a deep and immersive storyline.
 - Make pivotal decisions that influence the course of your narrative.
+
+<br>
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+The following instructions will guide you on how to get a copy of the project running on your local machine, from installing prerequisites to launching the game.
+
+### Prerequisites
+- You have installed the latest version of [.NET 7](https://dotnet.microsoft.com/download/dotnet/7.0).
+- You have a `Windows/Linux/Mac` machine, with support for .NET 7.
+- You have installed [Git](https://git-scm.com/downloads).
+
+### Installation
+To install Arcane Echoes: The Rise of the Obsidian Queen, follow these steps:
+
+#### Clone the repository
+First, you need to clone the GitHub repository.<br>
+Open a terminal, navigate to the folder you want to hold the game, and run the following command:<br>
+`git clone https://github.com/XPsyZchoX/Arcane_Echoes_The_Rise_of_the_Obsidian_Queen`
+
+This will create a new directory with the game project files.
+
+#### Navigate into the directory
+Change your current directory to the newly cloned repository:<br>
+`cd Arcane_Echoes_The_Rise_of_the_Obsidian_Queen`
+
+#### Build the application
+At this point, your project should be successfully installed and ready to build. Build the application by running:<br>
+`dotnet build`
+
+#### Run the application
+Once the build is successful, start the game by running:<br>
+`dotnet run`<br>
+
+After that you should see the game starting up in the console.
 
 <br>
 
