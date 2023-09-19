@@ -3,7 +3,7 @@
 namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 {
 	/// <summary>
-	/// This class is the starting point of execution for the game
+	/// This class is the starting point of execution for the application
 	/// </summary>
 	internal partial class EntryPoint
 	{
