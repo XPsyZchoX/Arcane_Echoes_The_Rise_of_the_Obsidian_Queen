@@ -12,17 +12,17 @@
 		/// <summary>
 		/// A list holding all items that can be interacted with throughout the game.
 		/// </summary>
-		private static readonly List<Item> AllItems = new;
+		private static readonly List<Item> AllItems = new();
 
 		/// <summary>
 		/// A list holding all locations that can be interacted with throughout the game.
 		/// </summary>
-		private static readonly List<Location> AllLocations = new;
+		private static readonly List<Location> AllLocations = new();
 
 		/// <summary>
 		/// A list holding all quests that can be interacted with throughout the game.
 		/// </summary>
-		private static readonly List<Quest> AllQuests = new;
+		private static readonly List<Quest> AllQuests = new();
 
 		#endregion Lists
 
@@ -83,8 +83,8 @@
 		private static void PopulateListAllItems()
 		{
 			// Create each item and add them to the list
-			AllItems.Add(new Item(ItemIDIronOre));
-			AllItems.Add(new Item(ItemIDSturdyWood));
+			AllItems.Add(new Item(ItemIDIronOre, "Iron Ore", "Iron Ore", "Iron ore is a valuable, heavy rock with a metallic essence that is pivotal in crafting a variety of useful tools and weapons in the blacksmith's forge."));
+			AllItems.Add(new Item(ItemIDSturdyWood, "Sturdy Wood", "Sturdy Wood", "Sturdy Wood, characterized by its resilience and strength, is a vital resource in various crafting endeavors, from blacksmithing to architecture."));
 		}
 
 		/// <summary>
@@ -93,8 +93,8 @@
 		private static void PopulateListAllLocations()
 		{
 			// Create each location
-			Location eldrinsForge = new Location(LocationIDEldrinsForge);
-			Location forest = new Location(LocationIDForest);
+			Location eldrinsForge = new(LocationIDEldrinsForge, "TODO", "TODO");
+			Location forest = new(LocationIDForest, "TODO", "TODO");
 
 			// Link the locations together
 			eldrinsForge.LocationToNorth = forest;
@@ -109,8 +109,8 @@
 		private static void PopulateListAllQuests()
 		{
 			// Create each quest
-			Quest theBlacksmithsNeed = new Quest(QuestIDTheBlacksmithsNeed);
-			theBlacksmithsNeed.QuestCompletionItems.Add(new QuestCompletionItem(GetItemByID(ItemIDIronOre), 3));
+			Quest theBlacksmithsNeed = new(QuestIDTheBlacksmithsNeed, "TODO", "TODO", 0, 0);
+			theBlacksmithsNeed.CompletionItems.Add(new QuestCompletionItem(GetItemByID(ItemIDIronOre), 3));
 
 			// Add each quest to the list
 			AllQuests.Add(theBlacksmithsNeed);
@@ -125,7 +125,7 @@
 		/// </summary>
 		/// <param name="id">The ID of the item to be retrieved.</param>
 		/// <returns>The Item instance with the given ID, or null if no such item exists.</returns>
-		public static Item GetItemByID(int id)
+		public static Item? GetItemByID(int id)
 		{
 			foreach (Item item in AllItems)
 				if (item.ID == id)
@@ -139,7 +139,7 @@
 		/// </summary>
 		/// <param name="id">The ID of the location to be retrieved.</param>
 		/// <returns>The Location instance with the given ID, or null if no such item exists.</returns>
-		public static Location GetLocationByID(int id)
+		public static Location? GetLocationByID(int id)
 		{
 			foreach (Location location in AllLocations)
 				if (location.ID == id)
@@ -153,7 +153,7 @@
 		/// </summary>
 		/// <param name="id">The ID of the quest to be retrieved.</param>
 		/// <returns>The Quest instance with the given ID, or null if no such item exists.</returns>
-		public static Quest GetQuestByID(int id)
+		public static Quest? GetQuestByID(int id)
 		{
 			foreach (Quest quest in AllQuests)
 				if (quest.ID == id)
