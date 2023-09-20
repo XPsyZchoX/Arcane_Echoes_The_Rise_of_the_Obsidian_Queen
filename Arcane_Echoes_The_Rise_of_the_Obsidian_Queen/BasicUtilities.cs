@@ -6,10 +6,16 @@
 	/// </summary>
 	internal static class BasicUtilities
 	{
+		#region Variables
+
 		/// <summary>
 		/// Represents an instance of the <b>Random</b> class used for generating random numbers.
 		/// </summary>
 		private static readonly Random _randomNumberGenerator = new();
+
+		#endregion Variables
+
+		#region Methods
 
 		/// <summary>
 		/// Generates and returns a random integer between the specified minimum value and maximum value.
@@ -39,5 +45,7 @@
 			}
 			Console.ResetColor();
 		}
+
+		#endregion Methods
 	}
 }
