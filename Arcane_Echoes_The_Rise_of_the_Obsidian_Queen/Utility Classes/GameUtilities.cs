@@ -121,10 +121,10 @@
 		#region Methods GetByID
 
 		/// <summary>
-		/// Retrieves an instance of the <b>Item</b> class corresponding to the specified ID.
+		/// Retrieves the <b>Item</b> object corresponding to the specified ID.
 		/// </summary>
 		/// <param name="id">The ID of the item to be retrieved.</param>
-		/// <returns>The Item instance with the given ID, or null if no such item exists.</returns>
+		/// <returns>The <b>Item</b> object with the given ID, or null if no such item exists.</returns>
 		public static Item? GetItemByID(int id)
 		{
 			foreach (Item item in AllItems)
@@ -135,10 +135,10 @@
 		}
 
 		/// <summary>
-		/// Retrieves an instance of the <b>Location</b> class corresponding to the specified ID.
+		/// Retrieves the <b>Location</b> object corresponding to the specified ID.
 		/// </summary>
 		/// <param name="id">The ID of the location to be retrieved.</param>
-		/// <returns>The Location instance with the given ID, or null if no such item exists.</returns>
+		/// <returns>The <b>Location</b> object with the given ID, or null if no such item exists.</returns>
 		public static Location? GetLocationByID(int id)
 		{
 			foreach (Location location in AllLocations)
@@ -149,10 +149,10 @@
 		}
 
 		/// <summary>
-		/// Retrieves an instance of the <b>Quest</b> class corresponding to the specified ID.
+		/// Retrieves the <b>Quest</b> object corresponding to the specified ID.
 		/// </summary>
 		/// <param name="id">The ID of the quest to be retrieved.</param>
-		/// <returns>The Quest instance with the given ID, or null if no such item exists.</returns>
+		/// <returns>The <b>Quest</b> object with the given ID, or null if no such item exists.</returns>
 		public static Quest? GetQuestByID(int id)
 		{
 			foreach (Quest quest in AllQuests)

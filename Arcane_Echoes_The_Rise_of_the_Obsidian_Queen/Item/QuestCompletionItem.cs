@@ -1,7 +1,7 @@
 ﻿namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 {
 	/// <summary>
-	/// Represents an item that is required to complete a quest, including its details and required quantity
+	/// Represents an item that is required to complete a quest, including its details and required quantity.
 	/// </summary>
 	internal class QuestCompletionItem
 	{
