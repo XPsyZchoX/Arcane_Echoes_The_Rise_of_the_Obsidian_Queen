@@ -1,7 +1,7 @@
 ﻿namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 {
 	/// <summary>
-	/// Represents a quest within the game.<br/>
+	/// Represents a quest within the game world.<br/>
 	/// It includes properties for identifying the quest (ID, Name, Description),
 	/// its rewards (Gold, Experience Points, Reward Item),<br/>
 	/// its completion status (IsCompleted), and

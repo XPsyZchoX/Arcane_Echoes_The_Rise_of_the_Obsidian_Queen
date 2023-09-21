@@ -10,17 +10,17 @@
 		#region Lists
 
 		/// <summary>
-		/// A list holding all items that can be interacted with throughout the game.
+		/// A list holding all items that can be interacted with throughout the game world.
 		/// </summary>
 		private static readonly List<Item> AllItems = new();
 
 		/// <summary>
-		/// A list holding all locations that can be interacted with throughout the game.
+		/// A list holding all locations that can be interacted with throughout the game world.
 		/// </summary>
 		private static readonly List<Location> AllLocations = new();
 
 		/// <summary>
-		/// A list holding all quests that can be interacted with throughout the game.
+		/// A list holding all quests that can be interacted with throughout the game world.
 		/// </summary>
 		private static readonly List<Quest> AllQuests = new();
 

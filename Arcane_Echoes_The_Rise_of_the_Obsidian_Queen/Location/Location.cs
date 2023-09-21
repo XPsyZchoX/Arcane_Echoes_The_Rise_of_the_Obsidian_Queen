@@ -1,7 +1,7 @@
 ﻿namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 {
 	/// <summary>
-	/// Represents a location within the game. Each location has a unique ID, name, and description.<br/>
+	/// Represents a location within the game world. Each location has a unique ID, name, and description.<br/>
 	/// A location can also require an item to be entered, and it can have a quest available.<br/>
 	/// Each location also contains references to adjacent locations in each cardinal direction (North, East, South, West).
 	/// </summary>
