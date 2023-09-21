@@ -110,7 +110,7 @@
 		{
 			// Create each quest
 			Quest theBlacksmithsNeed = new(QuestIDTheBlacksmithsNeed, "TODO", "TODO", 0, 0);
-			theBlacksmithsNeed.CompletionItems.Add(new QuestCompletionItem(GetItemByID(ItemIDIronOre), 3));
+			theBlacksmithsNeed.CompletionItems?.Add(new QuestCompletionItem(GetItemByID(ItemIDIronOre), 3));
 
 			// Add each quest to the list
 			AllQuests.Add(theBlacksmithsNeed);

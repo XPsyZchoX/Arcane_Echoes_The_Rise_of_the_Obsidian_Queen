@@ -10,7 +10,7 @@
 		/// <summary>
 		/// Gets or sets the details of the item.
 		/// </summary>
-		public Item Details { get; set; }
+		public Item? Details { get; set; }
 
 		/// <summary>
 		/// Gets or sets the quantity of the item that is required for the completion of the quest.
@@ -24,7 +24,7 @@
 		/// </summary>
 		/// <param name="details">The details of the item.</param>
 		/// <param name="quantity">The quantity of the item that is required for the completion of the quest.</param>
-		public QuestCompletionItem(Item details, int quantity)
+		public QuestCompletionItem(Item? details, int quantity)
 		{
 			Details = details;
 			Quantity = quantity;
