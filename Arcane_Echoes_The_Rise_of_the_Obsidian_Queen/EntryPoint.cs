@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using static Arcane_Echoes_The_Rise_of_the_Obsidian_Queen.Story;
 
 namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 {
@@ -28,6 +29,8 @@ namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 			ShowWindow(ThisConsole, Maximize);
 
 			#endregion Open console window in full screen
+
+			TitleScreen();
 		}
 	}
 }

@@ -2,10 +2,8 @@
 {
 	/// <summary>
 	/// Represents a quest within the game world.<br/>
-	/// It includes properties for identifying the quest (ID, Name, Description),
-	/// its rewards (Gold, Experience Points, Reward Item),<br/>
-	/// its completion status (IsCompleted), and
-	/// items required for its completion (CompletionItems).
+	/// It includes properties for identifying the quest (ID, Name, Description), its rewards (Gold, Experience Points, Reward Item),<br/>
+	/// its completion status (IsCompleted), and items required for its completion (CompletionItems).
 	/// </summary>
 	internal class Quest
 	{
