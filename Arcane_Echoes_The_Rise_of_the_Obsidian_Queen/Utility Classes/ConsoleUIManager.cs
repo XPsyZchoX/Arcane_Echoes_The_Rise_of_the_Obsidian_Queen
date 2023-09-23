@@ -1,11 +1,12 @@
 ﻿using static Arcane_Echoes_The_Rise_of_the_Obsidian_Queen.BasicUtilities;
+using static Arcane_Echoes_The_Rise_of_the_Obsidian_Queen.GameSession;
 
 namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 {
 	/// <summary>
-	/// A utility class responsible for managing the display of various game stages.
+	/// A utility class responsible for managing the user interface for the console application.
 	/// </summary>
-	internal static class Story
+	internal static class ConsoleUIManager
 	{
 		#region Methods that change the UI
 
@@ -53,8 +54,7 @@ namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
               ░  ░  ░    ░ ░           ░  ░        ░   ░  ░      ░  ░ ░      ░  ░  ░   ░ ░    ░  ░     ░                  ░  ░  ░  ░  ░      ░     ░       ░    ░  ░       ░ ░                     ░  ░  ░  ░  ░       ░ ░  ░           ░  ░    ░    ░       ░  ░        ░        ░      ░       ░  ░  ░  ░        ░
 			";
 
-			// Disable and set the position of the cursor
-			Console.CursorVisible = false;
+			// Set the position of the cursor
 			Console.SetCursorPosition(0, 24);
 
 			// Display the game title and prompt
@@ -66,24 +66,77 @@ namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 			Console.Clear();
 		}
 
+		/// <summary>
+		/// Displays the game's main menu.<br/>
+		/// The player is prompted to enter a number corresponding to the menu options, and the corresponding method is called based on that choice.
+		/// </summary>
 		public static void DisplayMainMenu()
 		{
-			// Display the header
+			// Enable console scrolling
+			Console.BufferHeight = short.MaxValue - 1;
+
+			// Display the header and menu options
 			DisplayHeader("-- MAIN MENU --");
+			Console.WriteLine("\n\n");
 
-			Console.WriteLine("\n\n\n");
+			DisplayTextCenteredHorizontally("1. Start Game");
+			DisplayTextCenteredHorizontally("2. Load Game");
+			DisplayTextCenteredHorizontally("3. Settings");
+			DisplayTextCenteredHorizontally("4. Achievements");
+			DisplayTextCenteredHorizontally("5. Credits");
+			DisplayTextCenteredHorizontally("6. Quit");
+			Console.WriteLine("\n");
 
-			// Display the menu
-			DisplaySingleLinesCenteredHorizontally("1. Start Game");
-			DisplaySingleLinesCenteredHorizontally("2. Load Game");
-			DisplaySingleLinesCenteredHorizontally("3. Settings");
-			DisplaySingleLinesCenteredHorizontally("4. Achievements");
-			DisplaySingleLinesCenteredHorizontally("5. Credits");
-			DisplaySingleLinesCenteredHorizontally("6. Quit");
+			// Display the prompt
+			DisplayTextCenteredHorizontally("Which option would you like to choose? Please enter the menu item number.", ConsoleColor.Blue);
 
-			// Wait for a player response and clear the console
-			Console.ReadKey();
-			Console.Clear();
+			// Make the cursor visible for the player's input
+			Console.CursorVisible = true;
+
+			// Loop the prompt until a valid input is received
+			int playerInput;
+			do
+			{
+				// Display the prompt and save the player's input
+				DisplayTextCenteredHorizontally("> ");
+				string? playerInputString = Console.ReadLine();
+				Console.WriteLine("\n");
+
+				// If the player's input is not a valid number or not in the menu option range, display an error message
+				if (!int.TryParse(playerInputString, out playerInput) || playerInput < 1 || playerInput > 6)
+				{
+					Console.WriteLine("");
+					DisplayTextCenteredHorizontally("That is not a valid input! Please enter a number between 1 and 6.", ConsoleColor.Red);
+				}
+			}
+			while (playerInput < 1 || playerInput > 6);
+
+			// Call the corresponding method based on the player's input
+			switch (playerInput)
+			{
+				case 1:
+					// StartGame();
+					break;
+				case 2:
+					// LoadGame();
+					break;
+				case 3:
+					// OpenSettings();
+					break;
+				case 4:
+					// OpenAchievements();
+					break;
+				case 5:
+					// ShowCredits();
+					break;
+				case 6:
+					QuitGame();
+					break;
+			}
+
+			// Disable console scrolling and make the cursor invisible
+			Console.BufferHeight = Console.WindowHeight;
+			Console.CursorVisible = false;
 		}
 
 		#endregion Methods that change the UI
@@ -128,6 +181,10 @@ namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 			int paddingBetweenLeftConsoleBorderAndBox = (Console.WindowWidth - boxWidth) / 2;
 			int paddingBetweenTopConsoleBorderAndBox = 10;
 
+			// Save the original foreground color and set the new one
+			ConsoleColor originalForegroundColor = Console.ForegroundColor;
+			Console.ForegroundColor = ConsoleColor.DarkGreen;
+
 			// Draw the box, including the game title
 			Console.SetCursorPosition(paddingBetweenLeftConsoleBorderAndBox, paddingBetweenTopConsoleBorderAndBox);
 			Console.WriteLine(topAndBottomBorder);
@@ -143,6 +200,9 @@ namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 
 			Console.SetCursorPosition(paddingBetweenLeftConsoleBorderAndBox, paddingBetweenTopConsoleBorderAndBox + 4);
 			Console.WriteLine(topAndBottomBorder);
+
+			// Reset the foreground color
+			Console.ForegroundColor = originalForegroundColor;
 
 			// Centering the header text horizontally and adjusting it vertically
 			int paddingBetweenLeftConsoleBorderAndHeaderText = paddingBetweenLeftConsoleBorderAndBox + (boxWidth / 2) - (headerText.Length / 2);

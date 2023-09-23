@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-22T21:27:38.024Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0" etag="LyY9lUaBxA10nycF0EsH" version="21.8.1" type="device">
+<mxfile host="app.diagrams.net" modified="2023-09-23T23:25:48.505Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0" etag="LBG8JZXUH_-H4w77kf8C" version="21.8.1" type="device">
   <diagram name="Page-1" id="J3AUHbUucc0vbvGvA6WI">
-    <mxGraphModel dx="968" dy="536" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1402" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -53,19 +53,19 @@
           <mxGeometry y="168" width="640" height="102" as="geometry" />
         </mxCell>
         <mxCell id="fnEIgWAX-s85td7BNk4T-50" value="&lt;u&gt;BasicUtilities&lt;/u&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="40" y="1480" width="800" height="120" as="geometry" />
+          <mxGeometry x="40" y="1480" width="920" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="fnEIgWAX-s85td7BNk4T-51" value="&lt;u&gt;- _randomNumberGenerator: Random&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="fnEIgWAX-s85td7BNk4T-50" vertex="1">
-          <mxGeometry y="26" width="800" height="24" as="geometry" />
+        <mxCell id="fnEIgWAX-s85td7BNk4T-51" value="&lt;u&gt;- _randomNumberGenerator: readonly Random&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="fnEIgWAX-s85td7BNk4T-50" vertex="1">
+          <mxGeometry y="26" width="920" height="24" as="geometry" />
         </mxCell>
         <mxCell id="fnEIgWAX-s85td7BNk4T-52" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="fnEIgWAX-s85td7BNk4T-50" vertex="1">
-          <mxGeometry y="50" width="800" height="8" as="geometry" />
+          <mxGeometry y="50" width="920" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="fnEIgWAX-s85td7BNk4T-53" value="&lt;u&gt;+ GenerateNumberBetweenMinAndMax(int minimumValue, int maximumValue): int&lt;br&gt;+ DisplayText(string text, ConsoleColor textColor = ConsoleColor.White, int textSpeed = 0): void&lt;br&gt;+ DisplayTextInsideBox(string text, ConsoleColor textAndBoxColor = ConsoleColor.White, ConsoleColor backgroundColor = ConsoleColor.Black)&lt;br&gt;&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="fnEIgWAX-s85td7BNk4T-50" vertex="1">
-          <mxGeometry y="58" width="800" height="62" as="geometry" />
+        <mxCell id="fnEIgWAX-s85td7BNk4T-53" value="&lt;u&gt;+ GenerateNumberBetweenMinAndMax(int minimumValue, int maximumValue): int&lt;br&gt;+ DisplayText(string text, ConsoleColor textColor = ConsoleColor.White, int textSpeed = 0): void&lt;br&gt;+ DisplayTextCenteredHorizontally(string text, ConsoleColor textColor = ConsoleColor.White, int textSpeed = 0): void&lt;br&gt;+ DisplayTextInsideBox(string text, ConsoleColor textAndBoxColor = ConsoleColor.White, ConsoleColor backgroundColor = ConsoleColor.Black, int topPadding = 44): void&lt;br&gt;&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="fnEIgWAX-s85td7BNk4T-50" vertex="1">
+          <mxGeometry y="58" width="920" height="72" as="geometry" />
         </mxCell>
         <mxCell id="fnEIgWAX-s85td7BNk4T-54" value="&lt;u&gt;GameUtilities&lt;/u&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="40" y="1630" width="240" height="260" as="geometry" />
+          <mxGeometry x="40" y="1640" width="240" height="260" as="geometry" />
         </mxCell>
         <mxCell id="fnEIgWAX-s85td7BNk4T-55" value="&lt;u&gt;- AllItems: List&amp;lt;Item&amp;gt;&lt;br&gt;&lt;/u&gt;&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;- AllLocations: List&amp;lt;Location&amp;gt;&lt;/u&gt;&lt;u&gt;&lt;br&gt;- AllQuests: List&amp;lt;Quest&amp;gt;&lt;br&gt;+ ItemID...: const int&lt;br&gt;&lt;/u&gt;&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;+ LocationID...: cont int&lt;/u&gt;&lt;u&gt;&lt;br&gt;+ QuestID...: const int&lt;br&gt;&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="fnEIgWAX-s85td7BNk4T-54" vertex="1">
           <mxGeometry y="26" width="240" height="104" as="geometry" />
@@ -112,14 +112,35 @@
         <mxCell id="fnEIgWAX-s85td7BNk4T-70" value="+&amp;nbsp;Item(int id, string name, string namePlural, string description)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="fnEIgWAX-s85td7BNk4T-67" vertex="1">
           <mxGeometry y="108" width="360" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="ml9_ZexbMtPgXuRrWGJN-1" value="&lt;u&gt;Story&lt;/u&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="1920" width="280" height="80" as="geometry" />
+        <mxCell id="ml9_ZexbMtPgXuRrWGJN-1" value="&lt;u&gt;ConsoleUIManager&lt;/u&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="1930" width="240" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="ml9_ZexbMtPgXuRrWGJN-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="ml9_ZexbMtPgXuRrWGJN-1">
-          <mxGeometry y="26" width="280" height="8" as="geometry" />
+        <mxCell id="ml9_ZexbMtPgXuRrWGJN-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="ml9_ZexbMtPgXuRrWGJN-1" vertex="1">
+          <mxGeometry y="26" width="240" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="ml9_ZexbMtPgXuRrWGJN-4" value="&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;+&amp;nbsp;TitleScreen()&lt;br&gt;&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;+ MainMenu()&lt;/u&gt;&lt;br&gt;&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ml9_ZexbMtPgXuRrWGJN-1">
-          <mxGeometry y="34" width="280" height="46" as="geometry" />
+        <mxCell id="ml9_ZexbMtPgXuRrWGJN-4" value="&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;+&amp;nbsp;EnterFullscreenMode()&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;: void&lt;/u&gt;&lt;br&gt;+&amp;nbsp;DisplayTitleScreen()&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;: void&lt;/u&gt;&lt;br&gt;&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;+ DisplayMainMenu()&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;: void&lt;/u&gt;&lt;br&gt;&lt;/u&gt;-&amp;nbsp;DisplayHeader(string headerText): void&lt;br&gt;&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="ml9_ZexbMtPgXuRrWGJN-1" vertex="1">
+          <mxGeometry y="34" width="240" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="UkHwC2_ZUP5Sx91iMytE-1" value="EntryPoint" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="2070" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UkHwC2_ZUP5Sx91iMytE-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="UkHwC2_ZUP5Sx91iMytE-1">
+          <mxGeometry y="26" width="120" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="UkHwC2_ZUP5Sx91iMytE-3" value="&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;- Main(): void&lt;br&gt;&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UkHwC2_ZUP5Sx91iMytE-1">
+          <mxGeometry y="34" width="120" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="UkHwC2_ZUP5Sx91iMytE-4" value="GameSession" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="2160" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="UkHwC2_ZUP5Sx91iMytE-5" value="+&amp;nbsp;CurrentPlayer: Player" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UkHwC2_ZUP5Sx91iMytE-4">
+          <mxGeometry y="26" width="160" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="UkHwC2_ZUP5Sx91iMytE-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="UkHwC2_ZUP5Sx91iMytE-4">
+          <mxGeometry y="50" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="UkHwC2_ZUP5Sx91iMytE-7" value="+&amp;nbsp;GameSession()&lt;br&gt;&lt;u&gt;+&amp;nbsp;QuitGame(): void&lt;br&gt;+&amp;nbsp;ConfirmQuitGame(): void&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UkHwC2_ZUP5Sx91iMytE-4">
+          <mxGeometry y="58" width="160" height="62" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

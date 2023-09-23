@@ -1,5 +1,11 @@
 ﻿namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 {
+	/// <summary>
+	/// Represents a player playing the game.<br/>
+	/// Each player object has properties to store their name, current and maximum hit points,<br/>
+	/// the amount of gold they hold, the number of experience points they've accumulated, and their current level.<br/>
+	/// Additionally, the player object keeps track of the player's current location and quests their currently have.
+	/// </summary>
 	internal class Player
 	{
 		#region Properties

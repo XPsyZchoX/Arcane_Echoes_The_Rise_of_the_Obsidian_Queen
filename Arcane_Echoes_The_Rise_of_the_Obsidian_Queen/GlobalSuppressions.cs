@@ -3,4 +3,5 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Interoperability", "CA1416:Validate platform compatibility", Justification = "<Pending>", Scope = "member", Target = "~M:Arcane_Echoes_The_Rise_of_the_Obsidian_Queen.EntryPoint.Main")]
+[assembly: SuppressMessage("Interoperability", "CA1416:Validate platform compatibility", Justification = "<Pending>", Scope = "type", Target = "~T:Arcane_Echoes_The_Rise_of_the_Obsidian_Queen.EntryPoint")]
+[assembly: SuppressMessage("Interoperability", "CA1416:Validate platform compatibility", Justification = "<Pending>", Scope = "type", Target = "~T:Arcane_Echoes_The_Rise_of_the_Obsidian_Queen.ConsoleUIManager")]

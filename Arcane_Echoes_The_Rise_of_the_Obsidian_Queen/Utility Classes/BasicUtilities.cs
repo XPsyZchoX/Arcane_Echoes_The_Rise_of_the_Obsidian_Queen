@@ -40,12 +40,60 @@
 			// Set the text color
 			Console.ForegroundColor = textColor;
 
+			// Display the text
 			if (textSpeed > 0)
+			{
 				foreach (char character in text)
 				{
 					Console.Write(character);
 					Thread.Sleep(textSpeed);
 				}
+
+				// Move the cursor to a new line after writing the characters
+				Console.WriteLine();
+			}
+			else
+				Console.WriteLine(text);
+
+			// Reset the text color
+			Console.ResetColor();
+		}
+
+		/// <summary>
+		/// Displays the specified text in the console, centered horizontally.<br/>
+		/// The color of the text and a typing effect can be optionally specified.
+		/// </summary>
+		/// <param name="text">The text to be displayed.</param>
+		/// <param name="textColor">The color to display the text in. The default is white.</param>
+		/// <param name="textSpeed">The speed of the typing effect. The default is 0 (instant display).</param>
+		public static void DisplayTextCenteredHorizontally(string text, ConsoleColor textColor = ConsoleColor.White, int textSpeed = 0)
+		{
+			// Set the text color
+			Console.ForegroundColor = textColor;
+
+			// Determine and write the padding to the left
+			int leftPadding = (Console.WindowWidth - text.Length) / 2;
+			Console.Write(new String(' ', leftPadding));
+
+			// If the text equals "> ", it should be written without a new line
+			if (text == "> ")
+			{
+				Console.Write(text);
+				return;
+			}
+
+			// Display the text
+			if (textSpeed > 0)
+			{
+				foreach (char character in text)
+				{
+					Console.Write(character);
+					Thread.Sleep(textSpeed);
+				}
+
+				// Move the cursor to a new line after writing the characters
+				Console.WriteLine();
+			}
 			else
 				Console.WriteLine(text);
 
@@ -106,27 +154,6 @@
 			Console.SetCursorPosition(originalCursorLeftPosition, originalCursorTopPosition);
 			Console.ForegroundColor = originalForegroundColor;
 			Console.BackgroundColor = originalBackgroundColor;
-		}
-
-		/// <summary>
-		/// Displays the specified text in the console, centered horizontally.
-		/// </summary>
-		/// <param name="text">The text to be displayed.</param>
-		/// <param name="textColor">The color to display the text in. The default is white.</param>
-		public static void DisplaySingleLinesCenteredHorizontally(string text, ConsoleColor textColor = ConsoleColor.White)
-		{
-			// Set the text color
-			Console.ForegroundColor = textColor;
-
-			// Centering the text horizontally
-			int leftPadding = (Console.WindowWidth - text.Length) / 2;
-			string centeredText = text.PadLeft(leftPadding + text.Length);
-
-			// Display the text
-			Console.WriteLine(centeredText);
-
-			// Reset the text color
-			Console.ResetColor();
 		}
 
 		#endregion Methods
