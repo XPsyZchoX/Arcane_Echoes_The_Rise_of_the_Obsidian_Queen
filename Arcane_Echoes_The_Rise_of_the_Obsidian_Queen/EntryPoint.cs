@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using static Arcane_Echoes_The_Rise_of_the_Obsidian_Queen.Story;
+﻿using static Arcane_Echoes_The_Rise_of_the_Obsidian_Queen.Story;
 
 namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 {
@@ -8,29 +7,14 @@ namespace Arcane_Echoes_The_Rise_of_the_Obsidian_Queen
 	/// </summary>
 	internal partial class EntryPoint
 	{
-		#region Open console window in full screen
-
-		[LibraryImport("kernel32.dll")]
-		private static partial IntPtr GetConsoleWindow();
-		private static IntPtr ThisConsole = GetConsoleWindow();
-
-		[LibraryImport("user32.dll", SetLastError = true)]
-		[return: MarshalAs(UnmanagedType.Bool)]
-		public static partial bool ShowWindow(IntPtr hWnd, int nCmdShow);
-
-		private const int Maximize = 3;
-
-		#endregion Open console window in full screen
-
 		static void Main()
 		{
-			#region Open console window in full screen
+			// Disable scrolling in the console
+			Console.BufferHeight = Console.WindowHeight;
 
-			ShowWindow(ThisConsole, Maximize);
-
-			#endregion Open console window in full screen
-
-			TitleScreen();
+			EnterFullscreenMode();
+			DisplayTitleScreen();
+			DisplayMainMenu();
 		}
 	}
 }

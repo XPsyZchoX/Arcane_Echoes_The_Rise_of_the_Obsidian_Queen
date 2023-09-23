@@ -37,6 +37,7 @@
 		/// <param name="textSpeed">The speed of the typing effect. The default is 0 (instant display).</param>
 		public static void DisplayText(string text, ConsoleColor textColor = ConsoleColor.White, int textSpeed = 0)
 		{
+			// Set the text color
 			Console.ForegroundColor = textColor;
 
 			if (textSpeed > 0)
@@ -48,17 +49,19 @@
 			else
 				Console.WriteLine(text);
 
+			// Reset the text color
 			Console.ResetColor();
 		}
 
 		/// <summary>
 		/// Displays the specified text inside a box in the console.<br/>
-		/// The color of the text and box, as well as the background color can be optionally specified.
+		/// The color of the text and box, as well as the background color and the top padding can be optionally specified.
 		/// </summary>
 		/// <param name="text">The text to be displayed.</param>
 		/// <param name="textAndBoxColor">The color to display the text and box in. The default is white.</param>
 		/// <param name="backgroundColor">The color of the box's background. The default is black.</param>
-		public static void DisplayTextInsideBox(string text, ConsoleColor textAndBoxColor = ConsoleColor.White, ConsoleColor backgroundColor = ConsoleColor.Black)
+		/// <param name="topPadding">The top padding between the top of the console and the box. The default is 44.</param>
+		public static void DisplayTextInsideBox(string text, ConsoleColor textAndBoxColor = ConsoleColor.White, ConsoleColor backgroundColor = ConsoleColor.Black, int topPadding = 44)
 		{
 			// Represents the margin between the border of the box and the message that is displayed inside
 			int boxPadding = 4;
@@ -76,9 +79,8 @@
 			// The length of the string corresponds to 'boxContentWidth'
 			string topAndBottomBorder = new('═', boxContentWidth);
 
-			// Centering the box horizontally and adjusting it vertically
+			// Centering the box horizontally
 			int leftPadding = (Console.WindowWidth - boxContentWidth) / 2;
-			int topPadding = 44;
 
 			// Save the original console settings
 			int originalCursorLeftPosition = Console.CursorLeft;
@@ -104,6 +106,27 @@
 			Console.SetCursorPosition(originalCursorLeftPosition, originalCursorTopPosition);
 			Console.ForegroundColor = originalForegroundColor;
 			Console.BackgroundColor = originalBackgroundColor;
+		}
+
+		/// <summary>
+		/// Displays the specified text in the console, centered horizontally.
+		/// </summary>
+		/// <param name="text">The text to be displayed.</param>
+		/// <param name="textColor">The color to display the text in. The default is white.</param>
+		public static void DisplaySingleLinesCenteredHorizontally(string text, ConsoleColor textColor = ConsoleColor.White)
+		{
+			// Set the text color
+			Console.ForegroundColor = textColor;
+
+			// Centering the text horizontally
+			int leftPadding = (Console.WindowWidth - text.Length) / 2;
+			string centeredText = text.PadLeft(leftPadding + text.Length);
+
+			// Display the text
+			Console.WriteLine(centeredText);
+
+			// Reset the text color
+			Console.ResetColor();
 		}
 
 		#endregion Methods
